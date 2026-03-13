@@ -1,0 +1,232 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(120deg,#140c1f,#1e1230,#140c1f);
+overflow:hidden;
+}
+
+/* particle canvas */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+/* card */
+
+.wrapper{
+
+width:900px;
+max-width:95%;
+height:520px;
+
+border-radius:25px;
+overflow:hidden;
+
+position:relative;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+
+box-shadow:0 30px 80px rgba(0,0,0,.8);
+
+}
+
+/* sliding pages */
+
+.pages{
+
+display:flex;
+width:200%;
+height:100%;
+
+transition:transform .8s cubic-bezier(.77,0,.18,1);
+
+}
+
+.wrapper.show-register .pages{
+transform:translateX(-50%);
+}
+
+.page{
+
+width:50%;
+height:100%;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+color:white;
+
+}
+
+/* register background */
+
+.register{
+background:linear-gradient(140deg,#3d1c6b,#542c91);
+}
+
+/* title */
+
+h1{
+
+margin-bottom:30px;
+
+color:#e2c8ff;
+
+text-shadow:0 0 25px #9a6cff;
+
+}
+
+/* input box */
+
+.input{
+
+position:relative;
+margin:12px 0;
+
+}
+
+.input input{
+
+width:260px;
+
+padding:12px 45px;
+
+border:none;
+border-radius:12px;
+
+background:rgba(255,255,255,.12);
+
+color:white;
+outline:none;
+
+}
+
+/* left icons */
+
+.input i.fa-envelope,
+.input i.fa-user,
+.input i.fa-lock{
+
+position:absolute;
+
+left:12px;
+top:50%;
+
+transform:translateY(-50%);
+
+color:#c8a6ff;
+
+}
+
+/* toggle icon */
+
+.toggle{
+
+position:absolute;
+
+right:12px;
+top:50%;
+
+transform:translateY(-50%);
+
+cursor:pointer;
+
+color:#c8a6ff;
+
+}
+
+/* buttons */
+
+button{
+
+margin-top:18px;
+
+padding:12px 70px;
+
+border:none;
+border-radius:12px;
+
+background:linear-gradient(90deg,#9a6cff,#6b4cff);
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 25px #9a6cff;
+
+}
+
+/* switch text */
+
+.switch{
+
+margin-top:18px;
+
+font-size:14px;
+
+color:#e8dcff;
+
+}
+
+.switch span{
+
+color:#caa7ff;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+/* copyright */
+
+.copyright{
+
+position:absolute;
+
+bottom:12px;
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:13px;
+
+color:#b892ff;
+
+letter-spacing:1px;
+
+opacity:.8;
+
+text-shadow:0 0 10px rgba(184,146,255,0.6);
+
+}
+
+/*
+Author: Anuj Thakur
+UI Design: Auth Particle Interface
+*/
